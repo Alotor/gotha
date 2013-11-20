@@ -185,8 +185,13 @@ public class JFrGotha extends javax.swing.JFrame {
         lblFlowChart = new javax.swing.JLabel();
         pnlControlPanel = new javax.swing.JPanel();
         pnlIntControlPanel = new javax.swing.JPanel();
+        pnlTablesPanel = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         scpControlPanel = new javax.swing.JScrollPane();
         tblControlPanel = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         lblWarningPRE = new javax.swing.JLabel();
         pnlStandings = new javax.swing.JPanel();
         pnlIntStandings = new javax.swing.JPanel();
@@ -324,7 +329,7 @@ public class JFrGotha extends javax.swing.JFrame {
 
         txfNumberOfRounds.setText("0");
         pnlSystem.add(txfNumberOfRounds);
-        txfNumberOfRounds.setBounds(160, 140, 30, 20);
+        txfNumberOfRounds.setBounds(160, 140, 30, 19);
 
         lblRecommended.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         lblRecommended.setText("(recommended for ancilliary standings only)");
@@ -339,44 +344,44 @@ public class JFrGotha extends javax.swing.JFrame {
 
         jLabel8.setText("Short name");
         pnlIdentification.add(jLabel8);
-        jLabel8.setBounds(10, 70, 80, 14);
+        jLabel8.setBounds(10, 70, 80, 15);
 
         txfShortName.setText("Key name of the tournament");
         pnlIdentification.add(txfShortName);
-        txfShortName.setBounds(90, 70, 180, 20);
+        txfShortName.setBounds(90, 70, 180, 19);
 
         jLabel10.setText("Name");
         pnlIdentification.add(jLabel10);
-        jLabel10.setBounds(10, 30, 80, 14);
+        jLabel10.setBounds(10, 30, 80, 15);
 
         txfName.setText("Tournament name");
         txfName.setSelectionStart(0);
         pnlIdentification.add(txfName);
-        txfName.setBounds(90, 30, 180, 20);
+        txfName.setBounds(90, 30, 180, 19);
 
         jLabel11.setText("Location");
         pnlIdentification.add(jLabel11);
-        jLabel11.setBounds(10, 110, 80, 14);
+        jLabel11.setBounds(10, 110, 80, 15);
 
         txfLocation.setText("Location name");
         pnlIdentification.add(txfLocation);
-        txfLocation.setBounds(90, 110, 180, 20);
+        txfLocation.setBounds(90, 110, 180, 19);
 
         jLabel12.setText("Begin date");
         pnlIdentification.add(jLabel12);
-        jLabel12.setBounds(10, 160, 80, 14);
+        jLabel12.setBounds(10, 160, 80, 15);
 
         txfBeginDate.setText("yyyy-mm-dd");
         pnlIdentification.add(txfBeginDate);
-        txfBeginDate.setBounds(90, 160, 110, 20);
+        txfBeginDate.setBounds(90, 160, 110, 19);
 
         jLabel19.setText("End date");
         pnlIdentification.add(jLabel19);
-        jLabel19.setBounds(10, 180, 80, 14);
+        jLabel19.setBounds(10, 180, 80, 15);
 
         txfEndDate.setText("yyyy-mm-dd");
         pnlIdentification.add(txfEndDate);
-        txfEndDate.setBounds(90, 180, 110, 20);
+        txfEndDate.setBounds(90, 180, 110, 19);
 
         dlgNew.getContentPane().add(pnlIdentification);
         pnlIdentification.setBounds(120, 10, 280, 220);
@@ -418,7 +423,7 @@ public class JFrGotha extends javax.swing.JFrame {
             }
         });
         dlgImportXML.getContentPane().add(btnDlgImportXMLOK);
-        btnDlgImportXMLOK.setBounds(130, 280, 120, 23);
+        btnDlgImportXMLOK.setBounds(130, 280, 120, 25);
 
         btnDlgImportXMLCancel.setText("Cancel");
         btnDlgImportXMLCancel.addActionListener(new java.awt.event.ActionListener() {
@@ -427,7 +432,7 @@ public class JFrGotha extends javax.swing.JFrame {
             }
         });
         dlgImportXML.getContentPane().add(btnDlgImportXMLCancel);
-        btnDlgImportXMLCancel.setBounds(290, 280, 120, 23);
+        btnDlgImportXMLCancel.setBounds(290, 280, 120, 25);
 
         pnlObjectsToImport.setBorder(javax.swing.BorderFactory.createTitledBorder("Objects to Import"));
         pnlObjectsToImport.setLayout(null);
@@ -452,7 +457,7 @@ public class JFrGotha extends javax.swing.JFrame {
         chkTeams.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         chkTeams.setText("Teams and team parameters");
         pnlObjectsToImport.add(chkTeams);
-        chkTeams.setBounds(20, 140, 190, 23);
+        chkTeams.setBounds(20, 140, 190, 21);
 
         dlgImportXML.getContentPane().add(pnlObjectsToImport);
         pnlObjectsToImport.setBounds(140, 40, 260, 170);
@@ -461,13 +466,13 @@ public class JFrGotha extends javax.swing.JFrame {
         jLabel1.setText("Importation will merge information from xml file with information in current tournament.");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         dlgImportXML.getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 230, 520, 14);
+        jLabel1.setBounds(10, 230, 520, 15);
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Before proceeding, make sure to have a good backup of your current tournament.");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         dlgImportXML.getContentPane().add(jLabel2);
-        jLabel2.setBounds(10, 250, 520, 14);
+        jLabel2.setBounds(10, 250, 520, 15);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Gotha");
@@ -501,9 +506,14 @@ public class JFrGotha extends javax.swing.JFrame {
 
         tpnGotha.addTab("Welcome", pnlWelcome);
 
-        pnlControlPanel.setLayout(null);
+        pnlControlPanel.setLayout(new java.awt.BorderLayout());
 
-        pnlIntControlPanel.setLayout(null);
+        pnlIntControlPanel.setLayout(new java.awt.BorderLayout());
+
+        pnlTablesPanel.setLayout(new java.awt.GridLayout(1, 2));
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Round Information"));
+        jPanel1.setLayout(new java.awt.BorderLayout());
 
         scpControlPanel.setBorder(null);
 
@@ -536,15 +546,45 @@ public class JFrGotha extends javax.swing.JFrame {
         tblControlPanel.setRowSelectionAllowed(false);
         scpControlPanel.setViewportView(tblControlPanel);
 
-        pnlIntControlPanel.add(scpControlPanel);
-        scpControlPanel.setBounds(180, 50, 370, 180);
+        jPanel1.add(scpControlPanel, java.awt.BorderLayout.CENTER);
+
+        pnlTablesPanel.add(jPanel1);
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Statistics"));
+        jPanel2.setLayout(new java.awt.BorderLayout());
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Number of Players", "A"},
+                {"Number of Clubs", "B"},
+                {"Number of Countries", "C"},
+                {"Number of Players on 5 wins", "D"},
+                {"Number of Players on 4 wins", "E"},
+                {"Number of Players on 3 wins", "F"},
+                {"Number of Players on 2 wins", "G"},
+                {"Number of Players on 1 wins", "H"},
+                {"Number of Players on 0 wins", "I"}
+            },
+            new String [] {
+                "Information", "Qty"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(1).setMaxWidth(80);
+        }
+
+        jPanel2.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+
+        pnlTablesPanel.add(jPanel2);
+
+        pnlIntControlPanel.add(pnlTablesPanel, java.awt.BorderLayout.CENTER);
 
         lblWarningPRE.setForeground(new java.awt.Color(255, 0, 0));
-        pnlIntControlPanel.add(lblWarningPRE);
-        lblWarningPRE.setBounds(10, 270, 510, 0);
+        lblWarningPRE.setText("TEST");
+        pnlIntControlPanel.add(lblWarningPRE, java.awt.BorderLayout.NORTH);
 
-        pnlControlPanel.add(pnlIntControlPanel);
-        pnlIntControlPanel.setBounds(0, 0, 790, 470);
+        pnlControlPanel.add(pnlIntControlPanel, java.awt.BorderLayout.CENTER);
 
         tpnGotha.addTab("Control Panel", pnlControlPanel);
 
@@ -554,7 +594,7 @@ public class JFrGotha extends javax.swing.JFrame {
 
         lblStandingsAfter.setText("Standings after round");
         pnlIntStandings.add(lblStandingsAfter);
-        lblStandingsAfter.setBounds(10, 40, 140, 14);
+        lblStandingsAfter.setBounds(10, 40, 140, 15);
 
         pnlPS.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Placement parameter set"));
         pnlPS.setLayout(null);
@@ -677,7 +717,7 @@ public class JFrGotha extends javax.swing.JFrame {
 
         lblUpdateTime.setText("updated at : ");
         pnlIntStandings.add(lblUpdateTime);
-        lblUpdateTime.setBounds(10, 300, 170, 14);
+        lblUpdateTime.setBounds(10, 300, 170, 15);
 
         spnRoundNumber.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -689,9 +729,9 @@ public class JFrGotha extends javax.swing.JFrame {
 
         jLabel7.setText("Search for a player");
         pnlIntStandings.add(jLabel7);
-        jLabel7.setBounds(10, 360, 150, 14);
+        jLabel7.setBounds(10, 360, 150, 15);
         pnlIntStandings.add(txfSearchPlayer);
-        txfSearchPlayer.setBounds(10, 380, 150, 20);
+        txfSearchPlayer.setBounds(10, 380, 150, 19);
 
         btnSearch.setText("Search/Next");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
@@ -700,7 +740,7 @@ public class JFrGotha extends javax.swing.JFrame {
             }
         });
         pnlIntStandings.add(btnSearch);
-        btnSearch.setBounds(10, 410, 150, 23);
+        btnSearch.setBounds(10, 410, 150, 25);
 
         pnlStandings.add(pnlIntStandings);
         pnlIntStandings.setBounds(0, 0, 790, 520);
@@ -752,7 +792,7 @@ public class JFrGotha extends javax.swing.JFrame {
 
         lblTeamsStandingsAfter.setText("Standings after round");
         pnlIntTeamsStandings.add(lblTeamsStandingsAfter);
-        lblTeamsStandingsAfter.setBounds(10, 40, 140, 14);
+        lblTeamsStandingsAfter.setBounds(10, 40, 140, 15);
 
         pnlTeamPS.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Team placement parameter set"));
         pnlTeamPS.setLayout(null);
@@ -897,7 +937,7 @@ public class JFrGotha extends javax.swing.JFrame {
 
         lblTeamUpdateTime.setText("updated at : ");
         pnlIntTeamsStandings.add(lblTeamUpdateTime);
-        lblTeamUpdateTime.setBounds(10, 360, 170, 14);
+        lblTeamUpdateTime.setBounds(10, 360, 170, 15);
 
         spnTeamRoundNumber.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -3294,6 +3334,9 @@ private void mniMemoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
@@ -3302,6 +3345,7 @@ private void mniMemoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JPopupMenu.Separator jSeparator6;
     private javax.swing.JPopupMenu.Separator jSeparator7;
     private javax.swing.JPopupMenu.Separator jSeparator8;
+    private javax.swing.JTable jTable1;
     private javax.swing.JLabel lblFlowChart;
     private javax.swing.JLabel lblRecommended;
     private javax.swing.JLabel lblStandingsAfter;
@@ -3359,6 +3403,7 @@ private void mniMemoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JPanel pnlPS;
     private javax.swing.JPanel pnlStandings;
     private javax.swing.JPanel pnlSystem;
+    private javax.swing.JPanel pnlTablesPanel;
     private javax.swing.JPanel pnlTeamPS;
     private javax.swing.JPanel pnlTeamsPanel;
     private javax.swing.JPanel pnlTeamsStandings;
